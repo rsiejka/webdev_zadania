@@ -1,0 +1,125 @@
+swagger: "2.0"
+definitions:
+  SesjaResponse:
+    required:
+      - Id
+      - Token
+      - Waznosc
+    properties:
+      Id:
+        type: string
+      Token:
+        type: string
+      Waznosc:
+        type: string
+        format: date-time
+
+  AdministratorResponse:
+    required:
+      - Prawa
+    properties:
+      Prawa:
+        type: string
+
+  UzytkownikResponse:
+    required:
+      - Id
+      - Imie
+      - Nazwisko
+      - Login
+      - Haslo
+      - Email
+    properties:
+      Id:
+        type: string
+      Imie:
+        type: string
+      Nazwisko:
+        type: string
+      Login:
+        type: string
+      Haslo:
+        type: string
+        format: password
+      Email: 
+        type: string
+        format: email
+
+  TagResponse:
+    required:
+      - Id
+      - Tekst
+    properties:
+      Id:
+        type: string
+      Tekst:
+        type: string
+
+  KomentarzReponse:
+    required:
+      - Id
+      - Tresc
+      - Data
+    properties:
+      Id: 
+        type: string
+      Tresc:
+        type: string
+      Data:
+        type: string
+        format: data-time
+
+  GaleriaResponse:
+    required:
+      - Id
+      - Tytul
+      - Opis
+      - Data
+      - Widocznosc
+    properties:
+      Id:
+        type: string
+      Tytul:
+        type: string
+      Opis:
+        type: string
+      Data:
+        type: string
+        format: data-time
+      Widocznosc:
+        type: string
+  
+  ObrazResponse:
+    required:
+      - Id
+      - Tytul
+      - Opis
+      - Data
+      - NazwaPliku
+      - Sciezka
+      - Rozmiar
+    properties:
+      Id:
+        type: string
+      Tytul:
+        type: string
+      Opis:
+        type: string
+      Data:
+        type: string
+        format: data-time
+      NazwaPliku:
+        type: string
+      Sciezka:
+        type: string
+      Rozmiar:
+        type: string
+
+  MiniaturaResponse:
+    required:
+      - Typ
+    properties:
+      Typ:
+        type: string
+
+

@@ -1,0 +1,315 @@
+swagger: "2.0"
+info:
+  version: "1.0"
+  title: "Hello World API"
+tags:
+  - name: user
+    description: Everything about users
+  - name: photo
+    description: Everything about single photo
+  - name: gallery
+    description: Everything about galleries
+
+paths:
+  /user/create:
+    put:
+      tags:
+      - user
+      description: creating new user
+      parameters:
+        - name: user
+          in: path
+          type: string
+          required: true
+          description: The name of the user
+        - surname: user
+          in: path
+          type: string
+          required: true
+          description: The surname of the user
+        - password: user
+          in: path
+          type: string
+          required: true
+          description: The password of the user
+      responses:
+        200:
+          description: Created new user.
+          schema:
+            type: string
+        400:
+          description: Error.
+          
+  /user/get/{id}:
+    get:
+      tags:
+      - user
+      description: read user
+      parameters:
+        - id: user
+          in: path
+          type: string
+          required: true
+          description: The id of the user
+      responses:
+        200:
+          description: User data.
+          schema:
+            type: string
+        400:
+          description: Error.
+
+  /user/update/{id}:
+    put:
+      tags:
+      - user
+      description: creating new user
+      parameters:
+          - id: user
+            in: path
+            type: string
+            required: true
+            description: The id of the user
+          - name: user
+            in: path
+            type: string
+            required: true
+            description: new name of the user
+          - surname: user
+            in: path
+            type: string
+            required: true
+            description: new surname of the user
+          - password: user
+            in: path
+            type: string
+            required: true
+            description: new password of the user
+      responses:
+        200:
+          description: Edited user.
+          schema:
+          type: string
+        400:
+          description: Error.
+        
+  /user/delete/{id}:
+    put:
+      tags:
+      - user
+      description: deleting user
+      parameters:
+          - id: user
+            in: path
+            type: string
+            required: true
+            description: The id of the user
+      responses:
+        200:
+          description: Deleted user.
+          schema:
+            type: string
+        400:
+          description: Error.
+
+  /photo/create:
+    put:
+      tags:
+      - photo
+      description: creating new photo
+      parameters:
+        - name: photo
+          in: path
+          type: string
+          required: true
+          description: The name of the photo
+        - surname: photo
+          in: path
+          type: string
+          required: true
+          description: The surname of the photo
+        - password: photo
+          in: path
+          type: string
+          required: true
+          description: The password of the photo
+      responses:
+        200:
+          description: Created new photo.
+          schema:
+            type: string
+        400:
+          description: Error.
+
+  /photo/get/{id}:
+    get:
+      tags:
+      - photo
+      description: read photo
+      parameters:
+        - id: photo
+          in: path
+          type: string
+          required: true
+          description: The id of the photo
+      responses:
+        200:
+          description: photo data.
+          schema:
+            type: string
+        400:
+          description: Error.
+
+  /photo/update/{id}:
+    put:
+      tags:
+      - photo
+      description: creating new photo
+      parameters:
+          - id: photo
+            in: path
+            type: string
+            required: true
+            description: The id of the photo
+          - name: photo
+            in: path
+            type: string
+            required: true
+            description: new name of the photo
+          - surname: photo
+            in: path
+            type: string
+            required: true
+            description: new surname of the photo
+          - password: photo
+            in: path
+            type: string
+            required: true
+            description: new password of the photo
+      responses:
+        200:
+          description: Edited photo.
+          schema:
+          type: string
+        400:
+          description: Error.
+        
+  /photo/delete/{id}:
+    put:
+      tags:
+      - photo
+      description: deleting photo
+      parameters:
+          - id: photo
+            in: path
+            type: string
+            required: true
+            description: The id of the photo
+      responses:
+        200:
+          description: Deleted photo.
+          schema:
+            type: string
+        400:
+          description: Error.
+
+  /gallery/create:
+    put:
+      tags:
+      - gallery
+      description: creating new gallery
+      parameters:
+          - name: gallery
+            in: path
+            type: string
+            required: true
+            description: The name of the gallery
+          - surname: gallery
+            in: path
+            type: string
+            required: true
+            description: The surname of the gallery
+          - password: gallery
+            in: path
+            type: string
+            required: true
+            description: The password of the gallery
+      responses:
+        200:
+          description: Created new gallery.
+          schema:
+            type: string
+        400:
+          description: Error.
+
+  /gallery/get/{id}:
+    get:
+      tags:
+      - gallery
+      description: read gallery
+      parameters:
+        - id: gallery
+          in: path
+          type: string
+          required: true
+          description: The id of the gallery
+      responses:
+        200:
+          description: gallery data.
+          schema:
+            type: string
+        400:
+          description: Error.
+
+  /gallery/update/{id}:
+    put:
+      tags:
+      - gallery
+      description: creating new gallery
+      parameters:
+          - id: gallery
+            in: path
+            type: string
+            required: true
+            description: The id of the gallery
+          - name: gallery
+            in: path
+            type: string
+            required: true
+            description: new name of the gallery
+          - surname: gallery
+            in: path
+            type: string
+            required: true
+            description: new surname of the gallery
+          - password: gallery
+            in: path
+            type: string
+            required: true
+            description: new password of the gallery
+      responses:
+        200:
+          description: Edited gallery.
+          schema:
+          type: string
+        400:
+          description: Error.
+      
+  /gallery/delete/{id}:
+    put:
+      tags:
+      - gallery
+      description: deleting gallery
+      parameters:
+          - id: gallery
+            in: path
+            type: string
+            required: true
+            description: The id of the gallery
+      responses:
+        200:
+          description: Deleted gallery.
+          schema:
+            type: string
+        400:
+          description: Error.

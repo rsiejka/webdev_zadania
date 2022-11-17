@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, rgb(73, 46, 196), #EA738DFF);
+    font-family: Calibri;
+}
+
+.oxo-grid {
+    display: grid;
+    justify-content: center;
+    min-height: 80vh;
+    align-content: center;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: minmax(120px, auto) repeat(3, 120px);
+    
+}
+
+    .oxo-grid > button {
+      cursor: pointer;
+      background-color: white;
+      color: white;
+    
+    }
+
+      .oxo-grid > button:hover {
+        background-color: #270404;
+        color: #270404;
+      }
+
+      .oxo-grid > button:disabled, button[disabled]{
+        background-color: #000000;
+        color: red;
+        font-size: 400%;
+        
+      }
+
+
+.res{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+    .res > button{
+        width: 360px;
+        height: 120px;
+        font-size: 500%;
+    }
+
+        .res > button:hover{
+            background-color: red;
+            color: white;
+        }
+
+      
